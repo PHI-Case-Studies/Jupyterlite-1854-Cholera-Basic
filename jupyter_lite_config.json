@@ -1,0 +1,10 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "site": {
+    "title": "1854 London Cholera Outbreak - Basic JupyterLite",
+    "description": "Browser-based notebooks exploring the 1854 London cholera outbreak"
+  },
+  "contents": [
+    { "source": "content" }
+  ]
+}
