@@ -1,2 +1,8 @@
-jupyterlite[lab]
-jupyterlite-pyodide-kernel
+# core JupyterLite build tooling
+jupyterlite-core>=0.7.0
+# Python kernel (Pyodide)
+jupyterlite-pyodide-kernel>=0.6.0
+# (used for indexing and UI)
+jupyterlab>=4.0,<5
+notebook>=7.0,<8
+
