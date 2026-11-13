@@ -1,14 +1,15 @@
 from IPython.display import HTML, IFrame
+from pathlib import Path
 import warnings, os
 
 def style_notebook():
     if os.getenv('JUPYTER_UI') is not None:
         if os.environ['JUPYTER_UI'] != '/lab':
-            style = open("./resources/style.css", "r").read()
-            return HTML(style)        
+            style = Path(__file__).with_name("style.css").read_text(encoding="utf-8")
+            return HTML(style)
 
 def show_video_file(url,width,height):
-    return HTML('<video width="900" height="600" controls ><source src="'+url+'"</video>')
+    return HTML(f'<video width="{width}" height="{height}" controls><source src="{url}" type="video/mp4"></video>')
 
 def show_youtube(url, width, height):
     return IFrame(url,width,height)
